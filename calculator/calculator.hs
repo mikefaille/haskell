@@ -7,11 +7,15 @@ main = do
     
     putStrLn "Enter the second number."
     num2	<-	getLine
-
+	
+	let newNum1 = read num1
+	let newNum2 = read num2
     let operator = case operation of
-        "a" -> (+)
-        "s" -> (-)
-        "m" -> (*)
+            "a" -> (+)
+            "s" -> (-)
+            "m" -> (*)
         
-    let answer = show(num1) operation show(num2)
+    let answer =  newNum1 operator newNum2
     putStrLn("hello")
+
+--calculator.hs:11:9: parse error on input ‘let’
