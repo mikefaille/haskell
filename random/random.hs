@@ -11,11 +11,7 @@ main = do
   let (a, g) = next g 
   print a
   putStrLn (show a)-}
-  r <- randomRIO (0,6) :: IO Int
+  let randomize = randomRIO (0, 6) :: IO Int
+  r <- randomize
   print r
   print r
-  r2 <- randomRIO (7,9) :: IO Int
-  print r2
-1
-1
-7
