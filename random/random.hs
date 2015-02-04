@@ -1,13 +1,10 @@
 import System.Random
 
 main = do
-  g <- getStdGen
-  let a = take 1 (randomRs ('1', '8') g)
-  putStrLn (show(a) )
-  let b = take 1 (randomRs ('1', '8') g)
-  putStrLn (show(b) )
+  let rs = randomRs ('1', '8') g
+  print (take 10 rs); let (a, rs') = rs
+  putStrLn (show a) {- do more stuff with rs' here -}
+--randomRIO (0,6) :: Int >>= print
 -{
-runhaskell random.hs
-"7"
-"7"
+random.hs:4:32: Not in scope: ‘g’
 -}
